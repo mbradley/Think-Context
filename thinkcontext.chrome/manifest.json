@@ -81,40 +81,12 @@
     		   ,"*://thinkcontext.org/*"
 		   ,"*://yahoo.com/*"
 		   ,"*://goodsearch.com/*"
+		   ,"*://127.0.0.1/*"
         		    ],
-    "background": {"scripts": ["jquery-1.7.1.min.js","bg-utils.js","db.js","background.js"]},
+    "background": {"scripts": ["pouch.alpha.min.js","jquery-1.7.1.min.js","bg-utils.js","db.js","background.js"]},
     "content_scripts": [
-	{
-	    "css": ["jquery-ui.css"],
-	    "matches": ["*://www.google.com/*"],
-	    "js": ["jquery-1.7.1.min.js","jquery-ui-1.8.16.custom.min.js","utils.js","google-search.js"]
-	}
-	, {
-	    "css": ["jquery-ui.css"],
-	    "matches": ["http://*.twitter.com/*", "https://*.twitter.com/*"],
-	    "js": ["jquery-1.7.1.min.js","jquery-ui-1.8.16.custom.min.js","bg-utils.js","utils.js","twitter.js"]
-	}
 
-	,{  "matches": ["*://plus.google.com/*"],
-	    "css": ["jquery-ui.css"],
-	    "js": ["jquery-1.7.1.min.js","jquery-ui-1.8.16.custom.min.js","utils.js","google-place-page.js"]
-	}
-	,{  "matches": ["*://maps.google.com/*"],
-	    "css": ["jquery-ui.css"],
-	    "js": ["jquery-1.7.1.min.js","jquery-ui-1.8.16.custom.min.js","utils.js","google-maps.js"]
-	}
-	,{
-	    "css": ["jquery-ui.css"],
-	    "matches": ["*://www.bing.com/search*"],
-	    "js": ["jquery-1.7.1.min.js","jquery-ui-1.8.16.custom.min.js","utils.js","bing-search.js"]
-	}
-	,{
-	    "all_frames": true,
-	    "css": ["jquery-ui.css"],
-	    "matches": ["http://*.search.yahoo.com/*","https://*.search.yahoo.com/*","*://goodsearch.com/*"],
-	    "js": ["jquery-1.7.1.min.js","jquery-ui-1.8.16.custom.min.js","utils.js","yahoo-search.js"]
-	}
-	,{
+    {
 
 	    "matches": ["*://*/*"],
 	    "exclude_globs": ["*://www.google.com/*"
