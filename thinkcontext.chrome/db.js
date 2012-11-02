@@ -1,10 +1,18 @@
 tc = {
 
-    db: Pouch('idb://reverse')
-
+//    db: Pouch('idb://reverse')
+    db: Pouch('http://127.0.0.1:5984/reverse')
+    
     , lookupReverse: function(key,request,callback){
-    }
-
+	tc.db.query('think/by_revlink'
+		    , {reduce: false
+		       , key: key}
+		    , function(err,response){
+			console.log(response);
+		    }		  
+		   );
+     }
+    
     , lookupReverseHome: function(key,request,callback){
     }
 
